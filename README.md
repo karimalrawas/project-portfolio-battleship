@@ -13,8 +13,7 @@ In this version, the board is set to 5x5, with three ships for both AI and user.
 
 - The player cannot see his ships to add an element of surprise and excitement, indicated by an 0, and of course cannot see where the computer's ships are either.
 
-- Guesses are marked on the board with an X. Hits are indicated by
-The player and the computer then take it in turns to make guesses and try to sink each other's battleships. 
+- Guesses are chosen through a row and a column, the computer will then take a turn after you by choosing randomly.
 
 - The score will be displayed after each round, to avoid having to scroll up each time. 
 
