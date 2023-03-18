@@ -20,8 +20,8 @@ def place_ships(num_ships):
     return ships
 
 # Welcome message
-print("Welcome to Battleship!")
-print("Try to sink all three battleships in as few turns as possible.")
+print("Welcome to Battleship of Destiny!")
+print("Sink all three ships to defeat the AI and save humanity!")
 
 # Place ships on the board
 ships = place_ships(3)
@@ -40,7 +40,7 @@ while True:
 
     # Player's turn
     if (guess_row, guess_col) in ships:
-        print("Congratulations! You sunk a battleship!")
+        print("Hurray! You sunk a battleship!")
         board[guess_row][guess_col] = "S"
         ships.remove((guess_row, guess_col))
         player_score += 1
@@ -52,11 +52,11 @@ while True:
     else:
         if guess_row not in range(5) or \
             guess_col not in range(5):
-            print("Oops, that's not even in the ocean.")
+            print("Nice try, that's not even in the ocean.")
         elif board[guess_row][guess_col] == "X":
-            print("You guessed that one already.")
+            print("You've tried this already.")
         else:
-            print("You missed the battleship!")
+            print("You missed human!")
             board[guess_row][guess_col] = "X"
         print("Player score:", player_score)
         print("Computer score:", computer_score)
