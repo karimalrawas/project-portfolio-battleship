@@ -65,7 +65,7 @@ while True:
     computer_guess_row = random.randint(0, len(board) - 1)
     computer_guess_col = random.randint(0, len(board[0]) - 1)
     if (computer_guess_row, computer_guess_col) in ships:
-        print("\nThe computer sunk one of your battleships!")
+        print("\nThe AI sunk one of your ships!")
         board[computer_guess_row][computer_guess_col] = "C"
         ships.remove((computer_guess_row, computer_guess_col))
         computer_score += 1
@@ -75,7 +75,7 @@ while True:
             print("Computer score:", computer_score)
             break
     else:
-        print("\nThe computer missed your battleship!")
+        print("\nThe AI missed your ship!")
         board[computer_guess_row][computer_guess_col] = "X"
     print("Player score:", player_score)
     print("Computer score:", computer_score)
