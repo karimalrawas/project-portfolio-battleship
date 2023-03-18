@@ -1,31 +1,67 @@
-![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
+# Battleship-of-Destiny
 
-Welcome karimalrawas,
+Battleship of Destiny is a Python terminal game, which runs on Heroku.
+You can beat the game by sinking all of the computer's three battleships before the computer sinks yours. CI template has been used for essential files. 
 
-This is the Code Institute student template for deploying your third portfolio project, the Python command-line project. The last update to this file was: **August 17, 2021**
+[Here is the live project](https://project-portfolio-battleship.herokuapp.com/)
 
-## Reminders
 
-* Your code must be placed in the `run.py` file
-* Your dependencies must be placed in the `requirements.txt` file
-* Do not edit any of the other files or your code may not deploy properly
+__How to play and Features__
 
-## Creating the Heroku app
+- Based on the classic pen-and-paper game. You can read more about it on Wikipedia.
+In this version, the board is set to 5x5, with three ships for both AI and user. 
 
-When you create the app, you will need to add two buildpacks from the _Settings_ tab. The ordering is as follows:
+- The player cannot see his ships to add an element of surprise and excitement, indicated by an 0, and of course cannot see where the computer's ships are either.
 
-1. `heroku/python`
-2. `heroku/nodejs`
+- Guesses are marked on the board with an X. Hits are indicated by
+The player and the computer then take it in turns to make guesses and try to sink each other's battleships. 
 
-You must then create a _Config Var_ called `PORT`. Set this to `8000`
+- The score will be displayed after each round, to avoid having to scroll up each time. 
 
-If you have credentials, such as in the Love Sandwiches project, you must create another _Config Var_ called `CREDS` and paste the JSON into the value field.
+__Future Features__
 
-Connect your GitHub repository and deploy as normal.
+ - The option to set board size and ship count
 
-## Constraints
 
-The deployment terminal is set to 80 columns by 24 rows. That means that each line of text needs to be 80 characters or less otherwise it will be wrapped onto a second line.
 
------
-Happy coding!
+__Data Model__
+
+- Board class has been used for this game.  
+
+
+__Solved Bugs__ 
+
+- I was getting an error message after first deployment to Heroku and was not able to login through gitpod terminal, but then I realized that I had to fix Nodes, Engine, and edit Config Vars in Heroku settings for the key: PORT and value: 8000, then the deployment worked as expected. 
+
+
+__Testing__
+
+- I have manually tested this project by doing the following:
+- Passed the code through a PEP8 linter and confirmed there are no problems
+- Tested in my Gitpod terminal and Heroku terminal
+
+__Validator Testing__
+
+  - No errors were returned from pep8ci.herokuapp.com
+
+
+
+__Deployment__
+
+- This project was deployed using Heroku.
+-  Steps for deployment:
+- Fork or clone this repository
+- Create a new Heroku app
+- Set the buildbacks to Python and NodeJS in that order
+- Link the Heroku app to the repository
+- Click on Deploy
+Credits
+
+__Credits__
+
+I looked at a structure from a similar project from [Here is the live project](https://project-portfolio-battleship.herokuapp.com/)
+
+
+
+
+
