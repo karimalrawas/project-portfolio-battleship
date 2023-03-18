@@ -19,22 +19,35 @@ def place_ships(num_ships):
         ships.append((ship_row, ship_col))
     return ships
 
+# Welcome message
+print("Welcome to Battleship!")
+print("Try to sink all three battleships in as few turns as possible.")
+
+# Place ships on the board
 ships = place_ships(3)
+
+# Track scores
+player_score = 0
+computer_score = 0
 
 # Looping the game 
 turns = 0
 while True:
-    print("Turn:", turns+1)
+    print("\nTurn:", turns+1)
     print_board(board)
     guess_row = int(input("Guess Row: "))
     guess_col = int(input("Guess Col: "))
 
+    # Player's turn
     if (guess_row, guess_col) in ships:
         print("Congratulations! You sunk a battleship!")
         board[guess_row][guess_col] = "S"
         ships.remove((guess_row, guess_col))
+        player_score += 1
         if not ships:
-            print("Congratulations! You won!")
+            print("\nCongratulations! You won!")
+            print("Player score:", player_score)
+            print("Computer score:", computer_score)
             break
     else:
         if guess_row not in range(5) or \
@@ -46,5 +59,21 @@ while True:
             print("You missed the battleship!")
             board[guess_row][guess_col] = "X"
 
-    turns += 1
+    # Computer's turn
+    computer_guess_row = random.randint(0, len(board) - 1)
+    computer_guess_col = random.randint(0, len(board[0]) - 1)
+    if (computer_guess_row, computer_guess_col) in ships:
+        print("\nThe computer sunk one of your battleships!")
+        board[computer_guess_row][computer_guess_col] = "C"
+        ships.remove((computer_guess_row, computer_guess_col))
+        computer_score += 1
+        if not ships:
+            print("\nGame over. The computer won!")
+            print("Player score:", player_score)
+            print("Computer score:", computer_score)
+            break
+    else:
+        print("\nThe computer missed your battleship!")
+        board[computer_guess_row][computer_guess_col] = "X"
 
+    turns += 1
