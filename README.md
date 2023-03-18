@@ -59,7 +59,14 @@ Credits
 
 __Credits__
 
-I looked at a structure from a similar project from [Here is the live project](https://project-portfolio-battleship.herokuapp.com/)
+- I looked at the structure for similar projects to remind myself of the score board functions, and how to add a score for each round:
+
+-  User: UnseenChaos. Project: [Replit](https://replit.com/@UnseenChaos/Python-Battleship)
+-  User: Amurug05.    Project: [Replit](https://replit.com/@amurug05/Battleships)
+
+- However, I did not copy any code from them directly because I wanted to find shortcuts. I wanted to have the same functions but with less lines of code, because these two projects made it unnecessarily complicated, but I still thank them for reminding me of the basic structure. 
+
+- I also looked at [Wikipedia](https://en.wikipedia.org/wiki/Battleship_(game)) to review the rules of the classic game, and see what I can change to spice it up in my own style. 
 
 
 
